@@ -9,7 +9,9 @@ on:
       - 'Dockerfile'
       - '.github/workflows/build.yml'
   pull_request:
-    branches: [main]
+    branches:
+      - main
+      - master
   workflow_dispatch:
   schedule:
     - cron: '0 0 * * 0' # weekly
