@@ -2,7 +2,6 @@ FROM caddy:2-builder AS builder
 
 RUN xcaddy build \
     --with github.com/pteich/caddy-tlsconsul \
-    --with github.com/inpher/caddy-consul \
     --with github.com/caddy-dns/cloudflare
 
 FROM caddy:2-alpine
@@ -13,4 +12,4 @@ RUN caddy version
 
 EXPOSE 80 443 2019
 
-CMD ["caddy", "run", "--config", "/etc/caddy/config.json", "--adapter", ""]
+CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile"]
