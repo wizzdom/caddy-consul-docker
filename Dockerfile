@@ -3,7 +3,8 @@ FROM caddy:2-builder AS builder
 RUN xcaddy build \
     --with github.com/pteich/caddy-tlsconsul \
     --with github.com/caddy-dns/cloudflare \
-    --with github.com/fortix/caddy-consul-ingress
+    --with github.com/fortix/caddy-consul-ingress \
+    --with github.com/mholt/caddy-l4
 
 FROM caddy:2-alpine
 
